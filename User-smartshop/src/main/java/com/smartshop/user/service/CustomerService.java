@@ -25,7 +25,7 @@ public class CustomerService {
 		return custRepo.save(customer);
 	}
 	
-	public Customer fetchUserByUserNameAndPassword(String userName, String password) {
+	public Customer fetchUserByUserNameAndPassword(String userName, String password){
 		return custRepo.findByUserNameAndPassword(userName, password);	
 }
 	public Product getProduct(int pId) {

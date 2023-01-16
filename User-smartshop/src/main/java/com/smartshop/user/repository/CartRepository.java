@@ -11,13 +11,12 @@ import com.smartshop.user.entity.Cart;
 
 public interface CartRepository extends JpaRepository<Cart, Integer>{
 	
-	@Query(value="SELECT * FROM cart  WHERE cart_id = :id",nativeQuery = true)
-	List<Cart> findCartById(Integer id);
+//	@Query(value="SELECT * FROM cart  WHERE cart_id = :id",nativeQuery = true)
+//	List<Cart> findCartById(Integer id);
+	
+	@Query("SELECT cart from Cart cart WHERE cart.customer.id = :id")
+	List<Cart> findCartById(@Param("id")Integer Id);
 	
 	
-//List<Cart> findCartById(@Param("pId")Integer pId);
-//	@Modifying
-//	@Query("update Cart c set c.pQuantity where c.id = :id")
-//	void updateQuantity(@Param("pQuantity") Integer pQuantity, @Param("pId") Integer id);
-//	
+
 }

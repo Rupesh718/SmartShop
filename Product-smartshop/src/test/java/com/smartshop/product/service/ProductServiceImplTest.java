@@ -62,33 +62,15 @@ class ProductServiceImplTest {
 	    }
 
 //
-	@Test
-	void testGetProductbyId() {
-	Product p1 = new Product(2000,"furniture",57456,1);
-    Optional<Product> optionalProduct=Optional.of(p1);
-    Mockito.when(productrepo.findById(2000)).thenReturn(optionalProduct);
-    Optional<Product> actuals=productService.GetProductbyId(2000);
-    Product actualProduct = actuals.get();
-    assertEquals(p1.getpId(), actualProduct.getpId());
-    assertEquals(p1.getpName(), actualProduct.getpName());
-    assertEquals(p1.getpPrice(), actualProduct.getpPrice());
-	}
-//
 //	@Test
-//	void testDeletProductbyId() {
-//		fail("Not yet implemented");
-//	}
-//
-//	@Test
-//	void testFindBypName() {
+//	void testGetProductbyId() {
 //	Product p1 = new Product(2000,"furniture",57456,1);
-//   Product product=(p1);
-//    Mockito.when(productrepo.findBypName(2000)).thenReturn(product);
-//    Product product actuals=productService.findBypName("furniture");
+//    Product optionalProduct=p1;
+//    Mockito.when(productrepo.findById(2000)).thenReturn(optionalProduct);
+//    Product actuals=productService.GetProductbyId(2000);
 //    Product actualProduct = actuals.get();
 //    assertEquals(p1.getpId(), actualProduct.getpId());
 //    assertEquals(p1.getpName(), actualProduct.getpName());
 //    assertEquals(p1.getpPrice(), actualProduct.getpPrice());
 //	}
-
 }

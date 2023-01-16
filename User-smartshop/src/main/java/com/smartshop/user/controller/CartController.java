@@ -24,6 +24,7 @@ public class CartController {
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/addCart")
 	public Cart addToCart(@RequestBody Cart cart) {
+		System.out.println("cart Added Succesfully");
 		return cartServ.addToCart(cart);
 	}
 	@CrossOrigin(origins = "http://localhost:4200")

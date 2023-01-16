@@ -16,7 +16,7 @@ public class Cart {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int cartId;
 private int pId;
-private int pPrice;
+private double pPrice;
 private String pName;
 @ManyToOne(cascade = CascadeType.MERGE)
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
@@ -27,7 +27,7 @@ public Cart() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Cart(int cartId, int pId, int pPrice, String pName,Customer customer, int pQuantity) //Customer customer
+public Cart(int cartId, int pId, double pPrice, String pName,Customer customer, int pQuantity) //Customer customer
 {
 	super();
 	this.cartId = cartId;
@@ -49,10 +49,10 @@ public int getpId() {
 public void setpId(int pId) {
 	this.pId = pId;
 }
-public int getpPrice() {
+public double getpPrice() {
 	return pPrice;
 }
-public void setpPrice(int pPrice) {
+public void setpPrice(double pPrice) {
 	this.pPrice = pPrice;
 }
 public String getpName() {

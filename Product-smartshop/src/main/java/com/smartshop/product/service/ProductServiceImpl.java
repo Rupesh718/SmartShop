@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.smartshop.product.entity.Product;
+import com.smartshop.product.exceptions.ProductNotFoundException;
 import com.smartshop.product.repository.ProductRepo;
 
 @Service
@@ -38,8 +39,8 @@ public class ProductServiceImpl implements ProductService {
 //	}
 
 	@Override
-	public Optional<Product> GetProductbyId(int pId) {
-		return proRepo.findById(pId);
+	public Product GetProductbyId(int pId) {
+		return proRepo.findById(pId).orElseThrow(() -> new ProductNotFoundException("Product Not found!"));
 	}
 
 	@Override

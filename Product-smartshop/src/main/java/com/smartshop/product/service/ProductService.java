@@ -10,15 +10,11 @@ import com.smartshop.product.entity.Product;
 @Service
 public interface ProductService {
 	public Product addProduct(Product product);
-//	public Product UpdatePrdoductbyId(int pId);
 	public List<Product> saveProducts(List<Product> products);
-//		return repository.saveAll(product);
 	public List<Product> GetAllProducts();
-//	return repository.findAll();	
-	public Optional<Product> GetProductbyId(int pId);
+	public Product GetProductbyId(int pId);
 	public void DeletProductbyId(int pId);
 	public Product findBypName(String pName);
-	
 	public Product updateProduct(Product product, int pId);
 
 }

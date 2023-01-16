@@ -44,7 +44,7 @@ public class productController {
 	}
 
 	@GetMapping("/getproduct/{pId}")
-	public Optional<Product> GetProductbyid(@PathVariable("pId") int pId) {
+	public Product GetProductbyid(@PathVariable("pId") int pId) {
 		return proser.GetProductbyId(pId);
 	}
 	  
