@@ -1,0 +1,50 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Smart shop</a>
+      <form class="d-flex">
+        <!-- <button class="btn btn-default" a routerLink="/showproduct" routerLinkActive="active"  type="submit">Product</button><br> -->
+        <button class="btn btn-default"a routerLink="/addproduct" routerLinkActive="active" type="submit">Add Product</button><br>
+        <br>
+        <button class="btn btn-default"a routerLink="/show" routerLinkActive="active" type="submit">Show Product</button><br>
+        <br>
+        <button class="btn btn-default"a routerLink="/home" routerLinkActive="active" type="submit">Log Out</button><br>
+      </form>
+    </div>
+  </nav>
+<form class="productadd" [formGroup]="addProduct" (ngSubmit)="registerProduct()">
+    <label>Product Id:-</label><br>
+    <input type="text" formControlName="pId" id="pId">
+    <br>
+    <label>Product Name:-</label><br>
+    <input type="text" formControlName="pName" id="pName" >
+    <br>
+    <label>Product Price:-</label><br>
+    <input type="text" formControlName="pPrice" id="pPrice">
+    <br>
+    <label>Product Quantity:-</label><br>
+    <input type="text" formControlName="pQuantity" id="pQuantity">
+    <br>
+    
+    <input class="btn btn-primary" type = "submit" value = "Add Products">
+</form>
+
+<h2 class="text-centre">Product List</h2>
+
+    <!-- <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productDetails">
+                <th scope="row">{{product.pId}}</th>
+                <td>{{product.pName}}</td>
+                <td>{{product.pPrice}}</td>
+                 <td><Button class="btn btn-success">Edit</Button></td>
+                <td>|</td> 
+                <td>{{product.pName}}</td> 
+               </tr>
+        </tbody>-->

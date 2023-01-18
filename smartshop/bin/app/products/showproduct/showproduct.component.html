@@ -1,0 +1,39 @@
+<div class="text-center">
+    <nav class="navbar navbar-dark bg-primary">
+        <h3>SmartShop</h3>
+        <form class="d-flex">
+            <button class="btn btn-default" a routerLink="/home" routerLinkActive="active"  type="submit">Log Out</button>
+        </form>        
+    </nav>
+    <h2 class="text-centre">Product List</h2>
+
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+                <!-- <th scope="col">Product Avaibility</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productDetails">
+                <th scope="row">{{product.pId}}</th>
+                <td>{{product.pName}}</td>
+                <td>{{product.pPrice}}</td>
+                 <!-- <td><Button class="btn btn-success">Edit</Button></td>
+                <td>|</td> -->
+                <td><input type="number" name="pQuantity" id={{product.pName}} #quantity></td>
+                <!-- this.product.pId,pQuantity.value,this.product.pPrice,this.product.pName) -->
+                <!-- <td><Button class="btn btn-warning" (click)="addToCart(product, quantity.value)">Add to cart</Button></td> -->
+                <td><Button class="btn btn-warning" (click)="addToCart(product, quantity.value)">Add to cart</Button></td>  
+            </tr>
+        </tbody>
+    </table> 
+    <footer class="footer">
+        <div class="container">
+            <span>Thanks For Visiting</span>
+        </div>
+    </footer>
+</div>
+

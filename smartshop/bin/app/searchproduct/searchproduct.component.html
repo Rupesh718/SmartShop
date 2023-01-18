@@ -1,0 +1,40 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Smart Shop</a>
+      <form class="d-flex">
+        <button class="btn btn-default" a routerLink="/showproduct" routerLinkActive="active"  type="submit">Show Product</button><br>
+        <br>
+        <i class="bi bi-cart"></i>
+        <br>
+        <button class="btn btn-default"a routerLink="/home" routerLinkActive="active" type="submit">Log Out</button><br>
+      </form>
+    </div>
+  </nav>
+  <body>
+    <div class="container col-md-6" id="container"><br><br>
+        <h2 class="text-centre"> Welcome</h2>
+        <form [formGroup]="getForm" (ngSubmit)="pName()">
+            <div class="input-group">
+               <input type="search" class="form-control rounded" placeholder="Product Name" aria-label="Search" formControlName="pName" >
+               <input type = submit>
+            </div>
+        </form>
+</div>
+</body><div class="text-center">
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{response.pId}}</td>
+                <td>{{response.pName}}</td>
+                <td>{{response.pPrice}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="text-center">
+    <nav class="navbar navbar-dark bg-primary">
+        <h3>SmartShop</h3>
+        <form class="d-flex">
+            <button class="btn btn-default" a routerLink="/home" routerLinkActive="active"  type="submit">Log Out</button>
+        </form>        
+    </nav>
+    <h2 class="text-centre">Product List</h2>
+
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+                <th scope="col">Product Quantity</th>
+                <!-- <th scope="col">Product Avaibility</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let products of productDetails">
+                <th scope="row">{{products.pId}}</th>
+                <td>{{products.pName}}</td>
+                <td>{{products.pPrice}}</td>
+                <td>{{products.pQuantity}}</td>
+            </tr>
+        </tbody>

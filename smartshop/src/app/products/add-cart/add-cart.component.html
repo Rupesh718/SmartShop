@@ -1,0 +1,25 @@
+<nav>
+    <h3>"Selected Items"</h3>
+</nav>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Product Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Quantity</th>
+            <!-- <th>Details</th> -->
+            <!-- <th scope="col">Product Avaibility</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productsInCart">
+            <th scoppe="col">{{product.pId}}</th>
+            <th scoppe="col">{{product.pName}}</th>
+            <th scoppe="col">{{product.pPrice * product.pQuantity}}</th>
+            <th scoppe="col">{{product.pQuantity}}</th>
+            <!-- <th scoppe="col"><button routerlink="/getDetails.pId"></button></th> -->
+    </tr>
+    </tbody>
+    <button (click)="orderPlaced()">Buy Now</button>

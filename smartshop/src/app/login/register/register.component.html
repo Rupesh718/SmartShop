@@ -1,0 +1,85 @@
+<div>
+  <form [formGroup]="register" (ngSubmit)="regsiterUser()">
+    <!-- class named "container" is assigned to div -->
+    <div class="container">
+      <h1>Register</h1>
+      <div class="user-details">
+        <div class="part-one">
+          <label for="first_Name"><b>First Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter First Name"
+            formControlName="first_Name"
+            id="username"
+            required
+          />
+          <label for="last_Name"><b>Last Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter Last Nme"
+            formControlName="last_Name"
+            id="username"
+            required
+          />
+          <label for="userName"><b>User Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            formControlName="userName"
+            id="username"
+            required
+          />
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            formControlName="password"
+            id="password"
+            required
+          />
+        </div>
+        <div>
+          <label for="city"><b>City</b></label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            formControlName="city"
+            id="username"
+            required
+          />
+          <label for="pincode"><b>Pincode</b></label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            formControlName="pincode"
+            id="username"
+            required
+          />
+          <label for="state"><b>State</b></label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            formControlName="state"
+            id="username"
+            required
+          />
+
+          <label for="emailId"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            formControlName="emailId"
+            id="emailId"
+            required
+          />
+        </div>
+      </div>
+      <button [disabled]="register.invalid" type="submit">Register</button>
+    </div>
+
+    <div>
+        <!-- a routerLink="/login routerLinkActive="active" -->
+        <p >Already have an account? <a routerLink="/login" routerLinkActive="active">Log in</a>.</p>
+    </div>
+  </form>
+</div>
